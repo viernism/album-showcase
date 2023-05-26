@@ -122,13 +122,13 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
   }
   
   html,
   body {
     height: 100%;
     margin: 0;
-    padding: 0;
   }
   
   body {
@@ -246,6 +246,12 @@
     text-align: center;
   }
 
+  .col-6 {
+    width: fit-content !important;
+    padding: .3rem;
+    margin: 5px;
+  }
+
   .btn-1 {
     height: 50px; 
     width: 125px;
@@ -271,5 +277,6 @@
     display: flex;
     padding: 15px;
     margin-left: 20px;
-  }
+  } /* i need to restructure this css real soon*/
   
+/* modals */
