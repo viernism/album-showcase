@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\UserProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+// Route::get('/', function () {
+//     return view('pages.home');
+// });
+
+Route::get('/', [GalleryController::class, 'index'])->name('home');
+Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store');
+Route::match(['get', 'post'], '/edit/{galleryId}', [GalleryController::class, 'update'])->name('update');
+Route::delete('/delete/{galleryId}', [GalleryController::class, 'delete'])->name('gallery.delete');
+
