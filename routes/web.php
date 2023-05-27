@@ -25,3 +25,11 @@ Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store'
 Route::match(['get', 'post'], '/edit/{galleryId}', [GalleryController::class, 'update'])->name('update');
 Route::delete('/delete/{galleryId}', [GalleryController::class, 'delete'])->name('gallery.delete');
 
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
