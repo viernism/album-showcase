@@ -9,13 +9,13 @@ $(document).ready(function () {
     });
 
     $('form.edit-form').on('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-
+        event.preventDefault(); // default is kil
+                                // no
         var form = $(this);
         var action = form.attr('action');
-        var galleryId = form.data('gallery-id');
+        var galleryId = form.data('gallery-id'); // i dont even need this because like fucking stuff already happen but for the sake of it
 
-        // Perform an AJAX request to submit the form data
+        // bro i literally use ajax bcs when i use the other method above, it doesnt fucking work and i have no idea why
         $.ajax({
             url: action,
             method: 'POST',
