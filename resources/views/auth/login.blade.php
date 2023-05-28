@@ -35,10 +35,10 @@
                     <img src="https://64.media.tumblr.com/fea224ab1bbbd524fde942407a1fde80/3539788757590a63-16/s540x810/4e4b8027b88b8e0c15ad7272e548a9d02d4079aa.pnj" height="120" width="120" alt="">
                     </div>
                     <div class="text-wrapper">
-                        <p>Type a name to identify yourself to Windows. Enter a</p>
-                        <p>password if you want to.</p> <br>
-                        <p>Tip: If you don't enter a password. you won't get into</p>
-                        <p>the Windows</p>
+                        <p>Type a name to identify yourself to Windows. Enter a password if you want to.</p>
+                        <p></p> <br>
+                        <p>Tip: If you don't enter a password. you won't get into the Windows</p>
+                        <p></p>
                         <div class="input-wrapper">
                             <div class="input-title-wrapper">
                                 <label for="email" class="form-label"><u>E</u>mail</label><br>
