@@ -275,6 +275,10 @@
     height: 26px;
     padding: 0 4px;
   }
+
+  span.title {
+    padding: 3px;
+  }
   
   .navbar-items {
     padding-top: 15px;

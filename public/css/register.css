@@ -252,6 +252,10 @@
     background-color: #000080;
   }
 
+  span.title {
+    padding: 3px;
+  }
+
   .title-bar-content {
     display: flex;
     align-items: center;
