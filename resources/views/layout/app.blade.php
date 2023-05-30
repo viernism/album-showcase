@@ -19,28 +19,33 @@
 </head>
 <body>
     <div class="container">
-        <nav id="navbar">
-        <div class="title-bar-wrapper">
-            <div class="title-bar-content">
-                <span class="title">Navigation</span>
-                <div class="title-bar-btn-wrapper">
-                    <button class="title-bar-btn minimize">-</button>
-                    <button class="title-bar-btn close">x</button>
-                </div>
-            </div>
-        </div>
-            <div class="navbar-content">
-                <div class="navbar-content-items">
-                <a href="">
-                <button class="btn-1">
-                    <p>
-                    <u>H</u>ome
-                    </p>
-                </button>
-                </a>
-                </div>
-            </div>
-        </nav>
+    <nav id="navbar">
+   <div class="title-bar-wrapper">
+      <div class="title-bar-content">
+         <span class="title">Navigation</span>
+         <div class="title-bar-btn-wrapper">
+            <button class="title-bar-btn minimize">-</button>
+            <button class="title-bar-btn close">x</button>
+         </div>
+      </div>
+   </div>
+   <div class="navbar-content">
+      <div class="navbar-content-items">
+         <a href="">
+            <button class="btn-1">
+               <p><u>H</u>ome</p>
+            </button>
+         </a>
+         <form action="{{ url('/logout?nocache=1') }}" method="post">
+            @csrf
+            <button type="submit" class="btn-1">
+               <p><u>L</u>ogout</p>
+            </button>
+        </form>
+      </div>
+   </div>
+</nav>
+
         @yield('content')
     </div>
 

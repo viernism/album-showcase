@@ -27,10 +27,10 @@ Route::middleware(['guest'])->group(function () {
     Route::post('login',[LoginController::class,'loginUser'])->name('login');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','revalidate'])->group(function () {
     Route::get('/', [GalleryController::class, 'index'])->name('home');
     Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store');
     Route::match(['get', 'post'], '/edit/{galleryId}', [GalleryController::class, 'update'])->name('update');
     Route::delete('/delete/{galleryId}', [GalleryController::class, 'delete'])->name('gallery.delete');
-    Route::post('/logout',[LogoutController::class])->name('logout');
+    Route::post('/logout',[LogoutController::class,'logout'])->name('logout');
 });

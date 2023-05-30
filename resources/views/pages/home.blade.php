@@ -125,7 +125,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="edit-desc" class="form-label"><u>D</u>escription</label>
-                            <textarea type="text" class="" id="edit-desc" name="desc" value="{{ $item->desc }}" rows="2" required></textarea>
+                            <textarea type="text" class="" id="edit-desc" name="desc" rows="2" required>{{ $item->desc }}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="edit-photo" class="form-label"><u>O</u>pen</label>
