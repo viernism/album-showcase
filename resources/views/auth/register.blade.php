@@ -15,7 +15,7 @@
     <!-- remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.3.0/remixicon.css" integrity="sha512-0JEaZ1BDR+FsrPtq5Ap9o05MUwn8lKs2GiCcRVdOH0qDcUcCoMKi8fDVJ9gnG8VN1Mp/vuWw2sMO0SQom5th4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>{{ $title ?? 'app-name' }}</title>
+    <title>Register</title>
 </head>
 <body>
 <div class="container">
@@ -31,27 +31,26 @@
             </div>
             <div class="login-content">
                 <div class="login-content-wrapper">
-                    <div class="image-text-input">
-                    <div class="input-wrapper">
-                            <label for="name"><u>N</u>ame</label><br>
-                            <input type="text" name="name" value=""><br>
-
-                            <label for="username"><u>U</u>sername</label><br>
-                            <input type="text" name="username" value=""><br>
-
-                            <label for="email"><u>E</u>maiil</label><br>
-                            <input type="email" name="email" value=""><br>
-
-                            <label for="password"><u>P</u>assword</label><br>
-                            <input type="password" name="password" value=""><br>
-
+                    <form action="/register" method="post">
+                        @csrf
+                        <div class="image-text-input">
+                            <div class="input-wrapper">
+                                    <label for="username"><u>U</u>sername</label><br>
+                                    <input type="text" name="username" value=""><br>
+    
+                                    <label for="email"><u>E</u>maiil</label><br>
+                                    <input type="email" name="email" value=""><br>
+    
+                                    <label for="password"><u>P</u>assword</label><br>
+                                    <input type="password" name="password" value=""><br>
+                            </div>
                         </div>
-                    </div>
-                    <div class="button-wrapper">
-                        <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <div class="button-spacer"></div>
-                        <button type="submit" class="btn-2 btn-success">OK</button>
-                    </div>
+                        <div class="button-wrapper">
+                            <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <div class="button-spacer"></div>
+                            <button type="submit" class="btn-2 btn-success">OK</button>
+                        </div>
+                    </form>
                 </div>
                 </div>
             </div>
