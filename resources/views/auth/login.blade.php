@@ -15,7 +15,7 @@
     <!-- remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.3.0/remixicon.css" integrity="sha512-0JEaZ1BDR+FsrPtq5Ap9o05MUwn8lKs2GiCcRVdOH0qDcUcCoMKi8fDVJ9gnG8VN1Mp/vuWw2sMO0SQom5th4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>{{ $title ?? 'app-name' }}</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="container">
@@ -30,32 +30,36 @@
                 </div>
             </div>
             <div class="login-content">
-                <div class="image-text-input">
-                    <div class="image-wrapper">
-                    <img src="https://64.media.tumblr.com/fea224ab1bbbd524fde942407a1fde80/3539788757590a63-16/s540x810/4e4b8027b88b8e0c15ad7272e548a9d02d4079aa.pnj" height="120" width="120" alt="">
-                    </div>
-                    <div class="text-wrapper">
-                        <p>Type a name to identify yourself to Windows. Enter a password if you want to.</p>
-                        <p></p> <br>
-                        <p>Tip: If you don't enter a password. you won't get into the Windows</p>
-                        <p></p>
-                        <div class="input-wrapper">
-                            <div class="input-title-wrapper">
-                                <label for="email" class="form-label"><u>E</u>mail</label><br>
-                                <label for="password"><u>P</u>assword</label>
-                            </div>
-                            <div class="input-content-wrapper">
-                                <input type="email" name="email" value=""><br>
-                                <input type="password" name="password" value=""><br>
+                <form action="/login" method="post">
+                    @csrf
+                    <div class="image-text-input">
+                        <div class="image-wrapper">
+                        <img src="https://64.media.tumblr.com/fea224ab1bbbd524fde942407a1fde80/3539788757590a63-16/s540x810/4e4b8027b88b8e0c15ad7272e548a9d02d4079aa.pnj" height="120" width="120" alt="">
+                        </div>
+                        <div class="text-wrapper">
+                            <p>Type a name to identify yourself to Windows. Enter a password if you want to.</p>
+                            <p></p> <br>
+                            <p>Tip: If you don't enter a password. you won't get into the Windows</p>
+                            <p></p>
+                            <div class="input-wrapper">
+                                <div class="input-title-wrapper">
+                                    <label for="email" class="form-label"><u>E</u>mail</label><br>
+                                    <label for="password"><u>P</u>assword</label>
+                                </div>
+                                <div class="input-content-wrapper">
+                                    <input type="email" name="email" value=""><br>
+                                    <input type="password" name="password" value=""><br>
+                                </div>
                             </div>
                         </div>
+                        <div class="button-wrapper">
+                            <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <div class="button-spacer"></div>
+                            <button type="submit" class="btn-2 btn-success">OK</button>
+                        </div>
                     </div>
-                    <div class="button-wrapper">
-                        <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <div class="button-spacer"></div>
-                        <button type="submit" class="btn-2 btn-success">OK</button>
-                    </div>
-                </div>
+                </form>
+                
             </div>
         </div>
     </div>
