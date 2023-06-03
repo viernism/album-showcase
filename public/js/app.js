@@ -34,6 +34,17 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function() {
+    // check the url duh
+    var currentUrl = window.location.href;
+
+    if (currentUrl.includes('/home')) {
+        $('#navbar').css('height', '800px'); // set navbar height if home (i dont even have /home but if i didnt use /home it wouldnt work)
+    } else if (currentUrl.includes('/profile')) {
+        $('#navbar').css('height', 'auto'); // set navbar height if profile
+    }
+});
+
 // club penguin is kil
 
 // no

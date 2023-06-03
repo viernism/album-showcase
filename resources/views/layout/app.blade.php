@@ -31,9 +31,14 @@
    </div>
    <div class="navbar-content">
       <div class="navbar-content-items">
-         <a href="">
+         <a href="/">
             <button class="btn-1">
                <p><u>H</u>ome</p>
+            </button>
+         </a>
+         <a href="/profile">
+            <button class="btn-1">
+               <p><u>M</u>y Profile</p>
             </button>
          </a>
          <form action="{{ url('/logout?nocache=1') }}" method="post">
