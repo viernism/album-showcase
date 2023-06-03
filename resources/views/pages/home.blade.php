@@ -18,6 +18,8 @@
                <span><u>A</u>dd&nbsp;New Data</span>
             </button>
          </a>
+         <hr class="horizontal-line" style="width: 550px !important;">
+
          <!-- <a href="#deleteSelectedDataModal" class="btn-1" data-bs-toggle="modal">
             <button class="btn-1">
                <span><u>D</u>elete</span>
