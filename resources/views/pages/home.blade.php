@@ -102,49 +102,49 @@
 
 <!-- edit -->
 @foreach ($gallery as $item)
-    <div class="modal fade" id="editDataModal-{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="editDataModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content text-white">
-              <form method="POST" action="{{ url('/edit/'.$item->id) }}" class="edit-form">
-                    @csrf
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editDataModalLabel">Edit Data</h5>
-                        <button type="button" class="title-bar-btn" data-bs-dismiss="modal" aria-label="Close">x</button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="image-and-inputs">
-                        <div class="image-wrapper">
-                          <img src="https://64.media.tumblr.com/f6abaab4202042b936ba2f561b7f81dc/893c0b4e28579d50-b4/s540x810/ce8b799c067b49c6cd6402868129235e58f4ef75.pnj" width="160" height="160" alt="">
-                        </div>
-                        <div class="inputs-wrapper">
-                          <div class="inputs-container">
-                            <div class="mb-3">
-                            <label for="edit-title" class="form-label"><u>T</u>itle</label>
-                            <input type="text" class="" id="edit-title" name="title" value="{{ $item->title }}" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="edit-desc" class="form-label"><u>D</u>escription</label>
-                            <textarea type="text" class="" id="edit-desc" name="desc" rows="2" required>{{ $item->desc }}</textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="edit-photo" class="form-label"><u>O</u>pen</label>
-                            <div class="input-with-background background-1">
-                              <input type="file" class="" id="edit-photo" name="image" value="" required>
-                            </div>
-                        </div>
+<div class="modal fade" id="editDataModal-{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="editDataModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+     <div class="modal-content text-white">
+        <form method="POST" action="{{ url('/edit/'.$item->id) }}" class="edit-form">
+           @csrf
+           <div class="modal-header">
+              <h5 class="modal-title" id="editDataModalLabel">Edit Data</h5>
+              <button type="button" class="title-bar-btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+           </div>
+           <div class="modal-body">
+              <div class="image-and-inputs">
+                 <div class="image-wrapper">
+                    <img src="https://64.media.tumblr.com/f6abaab4202042b936ba2f561b7f81dc/893c0b4e28579d50-b4/s540x810/ce8b799c067b49c6cd6402868129235e58f4ef75.pnj" width="160" height="160" alt="">
+                 </div>
+                 <div class="inputs-wrapper">
+                    <div class="inputs-container">
+                       <div class="mb-3">
+                          <label for="edit-title" class="form-label"><u>T</u>itle</label>
+                          <input type="text" class="" id="edit-title" name="title" value="{{ $item->title }}" required>
+                       </div>
+                       <div class="mb-3">
+                          <label for="edit-desc" class="form-label"><u>D</u>escription</label>
+                          <textarea type="text" class="" id="edit-desc" name="desc" rows="2" required>{{ $item->desc }}</textarea>
+                       </div>
+                       <div class="mb-3">
+                          <label for="edit-photo" class="form-label"><u>O</u>pen</label>
+                          <div class="input-with-background background-1">
+                             <input type="file" class="" id="edit-photo" name="image" value="" required>
                           </div>
-                        </div>
-                      </div>
+                       </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn-2 btn-primary">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn-2 btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn-2 btn-primary">Save</button>
+           </div>
+        </form>
+     </div>
+  </div>
+</div>
     @endforeach
 
 <!-- delete -->

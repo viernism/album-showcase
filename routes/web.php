@@ -32,5 +32,7 @@ Route::middleware(['auth','revalidate'])->group(function () {
     Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store');
     Route::match(['get', 'post'], '/edit/{galleryId}', [GalleryController::class, 'update'])->name('update');
     Route::delete('/delete/{galleryId}', [GalleryController::class, 'delete'])->name('gallery.delete');
+    Route::get('/profile', [UserProfileController::class, 'index']);
+    Route::put('/edit-profile', [UserProfileController::class, 'EditProfile'])->name('edit.profile');
     Route::post('/logout',[LogoutController::class,'logout'])->name('logout');
 });
