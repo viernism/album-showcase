@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+  font-family: 'w95fa';
+  src: url('/public/fonts/w95fa.woff') format('woff');
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -122,7 +127,7 @@
 /* love n hate relationship with coding;( */
 
 * {
-    font-family: 'Noto Serif', serif;
+    font-family: 'w95fa', serif;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -328,7 +333,7 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  width: 90px;
+  width: 100px;
   padding: 2px;
   line-height: normal;
   }
@@ -565,6 +570,10 @@
   align-items: center;
 }
 
+.profile-name {
+  padding-top: 5px;
+}
+
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -595,7 +604,6 @@
 }
 
 .bio-content {
-  width: 70%;
   overflow-x: auto;
 }
 
