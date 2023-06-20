@@ -60,7 +60,7 @@
                         <img src="https://64.media.tumblr.com/f6abaab4202042b936ba2f561b7f81dc/893c0b4e28579d50-b4/s540x810/ce8b799c067b49c6cd6402868129235e58f4ef75.pnj" width="160" height="160" alt="">
                     </div>
                     <div class="inputs-wrapper">
-                        <form action="{{ route('edit.profile') }}" method="post" enctype="multipart/form-data">>
+                        <form action="{{ route('edit.profile') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                         <div class="inputs-container">
