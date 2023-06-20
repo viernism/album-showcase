@@ -45,6 +45,21 @@ $(document).ready(function() {
     }
 });
 
+
+// (function () {
+//     if (window.history && window.history.pushState) {
+//         window.history.pushState(null, null, document.URL);
+//         window.addEventListener('popstate', function () {
+//             if (document.referrer.includes(window.location.hostname)) {
+//                 window.history.pushState(null, null, document.URL);
+//             } else {
+//                 window.location.href = '/';
+//             }
+//         });
+//     }
+// })(); // lol i made this when i couldnt figure out whats wrong with the auth validation
+
+
 // club penguin is kil
 
 // no
