@@ -21,7 +21,15 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // Redirect to the home page
+                $response = redirect(RouteServiceProvider::HOME);
+                
+                // Prevent caching
+                $response->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+                $response->header('Pragma', 'no-cache');
+                $response->header('Expires', 'Sat, 01 Jan 2000 00:00:00 GMT');
+
+                return $response;
             }
         }
 
